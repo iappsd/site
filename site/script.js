@@ -1,12 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('calculateBtn').addEventListener('click', calculateGPA);
-});
+function calculateWeightedScore() {
+    var gpa = document.getElementById('gpa').value;
+    var aptitude = document.getElementById('aptitude').value;
+    var achievement = document.getElementById('achievement').value;
 
-function calculateGPA() {
-    var firstYear = parseFloat(document.getElementById('firstYear').value);
-    var secondYear = parseFloat(document.getElementById('secondYear').value);
-    var thirdYear = parseFloat(document.getElementById('thirdYear').value);
-
-    var gpa = (firstYear * 0.2) + (secondYear * 0.4) + (thirdYear * 0.4);
-    document.getElementById('result').innerHTML = `المعدل التراكمي هو: ${gpa.toFixed(2)}`;
+    var weightedScore = (gpa * 0.3) + (aptitude * 0.3) + (achievement * 0.4);
+    document.getElementById('result').innerHTML = `النسبة الموزونة هي: ${weightedScore.toFixed(2)}`;
 }

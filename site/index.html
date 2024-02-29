@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حساب المعدل التراكمي</title>
-    <link rel="stylesheet" href="style.css"> <!-- ربط ملف CSS -->
+    <title>حساب النسبة الموزونة</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>حساب المعدل التراكمي</h2>
-    <label for="firstYear">نسبة أول ثانوي:</label>
-    <input type="number" id="firstYear" required>
-    <label for="secondYear">نسبة ثاني ثانوي:</label>
-    <input type="number" id="secondYear" required>
-    <label for="thirdYear">نسبة ثالث ثانوي:</label>
-    <input type="number" id="thirdYear" required>
-    <button id="calculateBtn">احسب المعدل</button>
-
+    <h2>حساب النسبة الموزونة</h2>
+    <div class="input-group">
+        <label for="gpa">المعدل التراكمي:</label>
+        <input type="number" id="gpa" required>
+    </div>
+    <div class="input-group">
+        <label for="aptitude">نتيجة القدرات:</label>
+        <input type="number" id="aptitude" required>
+    </div>
+    <div class="input-group">
+        <label for="achievement">نتيجة التحصيلي:</label>
+        <input type="number" id="achievement" required>
+    </div>
+    <button onclick="calculateWeightedScore()">احسب النسبة الموزونة</button>
     <div id="result"></div>
-    <script src="script.js"></script> <!-- ربط ملف JavaScript -->
+    <footer>
+        تصميم كيان عايد الرويلي
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
