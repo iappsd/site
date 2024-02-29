@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <title>حساب المعدل التراكمي والنسبة الموزونة</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
 <div class="container mt-5">
-    <h2 class="mb-4">إدخال الدرجات</h2>
+    <h2 class="mb-4 text-right">إدخال الدرجات</h2>
     <input type="number" id="firstYear" class="form-control mb-3" placeholder="نسبة أول ثانوي">
     <input type="number" id="secondYear" class="form-control mb-3" placeholder="نسبة ثاني ثانوي">
     <input type="number" id="thirdYear" class="form-control mb-3" placeholder="نسبة ثالث ثانوي">
     <input type="number" id="aptitudeTest" class="form-control mb-3" placeholder="نتيجة القدرات">
     <input type="number" id="achievementTest" class="form-control mb-3" placeholder="نتيجة التحصيلي">
-    <button onclick="calculate()" class="btn btn-primary mb-3">حساب</button>
-    <div id="cumulativeResult"></div>
-    <div id="weightedResult"></div>
+    <div class="d-grid gap-2 text-right">
+        <button onclick="calculate()" class="btn btn-lg btn-primary mb-3 ">حساب</button>
+        <hr/>
+        <div class="alert alert-primary" role="alert">
+            المعدل التراكمي هو: 
+            <span id="cumulativeResult">
+              
+            </span>
+          </div>
+          <div class="alert alert-success" role="alert">
+            النسبة الموزونة هو: 
+            <span id="weightedResult">
+               
+            </span>
+          </div>
+          <b>تطوير : كيان عايد</b>
+      </div>
+  
+ 
 </div>
 <script src="script.js"></script>
 </body>

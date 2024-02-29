@@ -11,6 +11,6 @@ function calculate() {
     // حساب النسبة الموزونة
     var weightedScore = (cumulativeGPA * 0.3) + (aptitudeTest * 0.3) + (achievementTest * 0.4);
 
-    document.getElementById('cumulativeResult').innerHTML = `المعدل التراكمي هو: ${cumulativeGPA.toFixed(2)}`;
-    document.getElementById('weightedResult').innerHTML = `النسبة الموزونة هو: ${weightedScore.toFixed(2)}`;
+    document.getElementById('cumulativeResult').innerHTML = ` ${cumulativeGPA.toFixed(2)}`;
+    document.getElementById('weightedResult').innerHTML = ` ${weightedScore.toFixed(2)}`;
 }
