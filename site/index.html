@@ -2,36 +2,21 @@
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حساب النسبة الموزونة</title>
-    <!-- رابط Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>حساب المعدل التراكمي والنسبة الموزونة</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-light">
-    <div class="container mt-5">
-        <h2 class="mb-4">حساب النسبة الموزونة</h2>
-        <div class="form-group">
-            <label for="gpa">المعدل التراكمي:</label>
-            <input type="number" id="gpa" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="aptitude">نتيجة القدرات:</label>
-            <input type="number" id="aptitude" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="achievement">نتيجة التحصيلي:</label>
-            <input type="number" id="achievement" class="form-control">
-        </div>
-        <button onclick="calculateWeightedScore()" class="btn btn-primary">احسب النسبة الموزونة</button>
-        <div id="result" class="mt-3"></div>
-    </div>
-    <footer class="footer mt-5 py-3 bg-dark text-white text-center">
-        تصميم كيان عايد الرويلي
-    </footer>
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+<body>
+<div class="container mt-5">
+    <h2 class="mb-4">إدخال الدرجات</h2>
+    <input type="number" id="firstYear" class="form-control mb-3" placeholder="نسبة أول ثانوي">
+    <input type="number" id="secondYear" class="form-control mb-3" placeholder="نسبة ثاني ثانوي">
+    <input type="number" id="thirdYear" class="form-control mb-3" placeholder="نسبة ثالث ثانوي">
+    <input type="number" id="aptitudeTest" class="form-control mb-3" placeholder="نتيجة القدرات">
+    <input type="number" id="achievementTest" class="form-control mb-3" placeholder="نتيجة التحصيلي">
+    <button onclick="calculate()" class="btn btn-primary mb-3">حساب</button>
+    <div id="cumulativeResult"></div>
+    <div id="weightedResult"></div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
